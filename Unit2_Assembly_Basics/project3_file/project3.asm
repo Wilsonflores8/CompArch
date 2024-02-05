@@ -95,5 +95,3 @@ asm_main:
         mov     eax, 0            ; return back to C
         leave                     
         ret
-
-
