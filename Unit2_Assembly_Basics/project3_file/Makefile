@@ -19,29 +19,12 @@ DEP := driver.o asm_io.o
 
 all: $(TARGETS)
 
-skeleton: $(DEP)
-
 project3: $(DEP)
-
-part1_exercises: $(DEP)
-
-part2_exercises: $(DEP)
-
-sum_example: $(DEP)
 
 asm_io.o: asm_io.asm
 	$(AS) $(ASFLAGS) -d ELF_TYPE asm_io.asm
 
-skeleton.o: asm_io.inc
-
 project3.o: asm_io.inc
-
-
-part1_exercises.o: asm_io.inc
-
-part2_exercises.o: asm_io.inc
-
-sum_example.o: asm_io.inc
 
 clean :
 	rm -f *.o $(TARGETS)
